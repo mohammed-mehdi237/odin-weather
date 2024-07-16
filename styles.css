@@ -32,9 +32,44 @@ body{
   opacity: 0.5;
 }
 
-input{
+.search img:hover{
+  background-color: gray;
+  border-radius: 50%;
+  padding: 2px;
+}
+
+.unit{
+  display: flex;
+  margin-top: -1.5rem;
+  gap: 2rem;
+  font-size: 2rem;
+}
+
+.unit label input{
+  display: none;
+}
+
+.unit label input:checked + .radio-button{
+  background-color: blue;
+  border: white 2px solid;
+}
+
+.radio-button{
+  width: 20px;
+  height: 20px;
+  border: 1px black solid;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: white;
+}
+
+
+
+input[type='text']{
   border: none;
   font-size: 1.5rem;
+  width: 100%;
+  overflow-x: scroll;
 }
 
 input:focus{
@@ -86,9 +121,16 @@ h3{
 
 
 .result{
-  margin-top: -2rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
   align-items: center;
+}
+
+.error{
+  font-size: 2.5rem;
+  color: red}
+
+.hide{
+  display: none;
 }

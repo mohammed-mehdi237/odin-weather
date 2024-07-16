@@ -1,71 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="./styles.css">
-  <script src="./main.js" defer></script>
-</head>
-<body>
-  <h1>My Weather App</h1>
-  <div class="search">
-    <input type="text" id="city" placeholder="Eg. Baghdad">
-    <img src="/icons/magnify (1).svg" width="35">
-  </div>
-  <div class="loading"></div>
-  <div class="result hide" id="result">
-    <h2>location</h2>
-    <div class="card primary">
-      <img src="./icons/weather-fog.svg"  id="weather-img" width="50">
-      <h3 id="weather-condition">fog</h3>
-      <div class="info-group">
-        <p>temp</p>
-        <p>30-30</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./main.js" defer></script>
+  </head>
+  <body>
+    <h1>My Weather App</h1>
+    <div class="search">
+      <input type="text" id="city" placeholder="Eg. Baghdad" />
+      <img src="/icons/magnify (1).svg" width="35" />
+    </div>
+    <div class="unit">
+      <label>
+        <input type="radio" name="choice" value="uk" checked />
+        <span class="radio-button"></span>
+        Celsius
+      </label>
+      <label>
+        <input type="radio" name="choice" value="us" />
+        <span class="radio-button"></span>
+        
+        Fahrenheit 
+      </label>
+    </div>
+    <p class="loading hide" id="loading">results will be coming shortly...</p>
+    <p class="error hide" id="error">There was an error, please try again...</p>
+    <div class="result hide" id="result">
+      <h2 id="location">location</h2>
+      <div class="card primary" id="card1">
+        <img src="./icons/clear-day.svg" id="weather-img" width="50" />
+        <h3 class="weather-condition">fog</h3>
+        <div class="info-group">
+          <p id="temp1">temp</p>
+          <p></p>
+        </div>
+        <div class="info-group">
+          <p>feels like</p>
+          <p id="feels-like1"></p>
+        </div>
       </div>
-      <div class="info-group">
-        <p>temp</p>
-        <p>30-30</p>
+      <div class="secondary-group">
+        <div class="card secondary" id="card2">
+          <img src="./icons/fog.svg" id="weather-img" width="30" />
+          <h3 class="weather-condition"></h3>
+          <div class="info-group">
+            <p>temp</p>
+            <p id="temp2"></p>
+          </div>
+          <div class="info-group">
+            <p>feels like</p>
+            <p id="feels-like2"></p>
+          </div>
+        </div>
+        <div class="card secondary" id="card3">
+          <img src="./icons/fog.svg" id="weather-img" width="30" />
+          <h3 class="weather-condition"></h3>
+          <div class="info-group">
+            <p>temp</p>
+            <p id="temp3"></p>
+          </div>
+          <div class="info-group">
+            <p>feels like</p>
+            <p id="feels-like3"></p>
+          </div>
+        </div>
+        <div class="card secondary" id="card4">
+          <img src="./icons/fog.svg" id="weather-img" width="30" />
+          <h3 class="weather-condition"></h3>
+          <div class="info-group">
+            <p>temp</p>
+            <p id="temp4"></p>
+          </div>
+          <div class="info-group">
+            <p>feels like</p>
+            <p id="feels-like4" id="feels-like4"></p>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="secondary-group">
-      <div class="card secondary">
-        <img src="./icons/weather-cloudy.svg" id="weather-img" width="30">
-        <h3 id="weather-condition"></h3>
-        <div class="info-group">
-          <p>temp</p>
-          <p>30-30</p>
-        </div>
-        <div class="info-group">
-          <p>temp</p>
-          <p>30-30</p>
-        </div>
-      </div>
-      <div class="card secondary">
-        <img src="./icons/weather-cloudy.svg" id="weather-img" width="30">
-        <h3 id="weather-condition"></h3>
-        <div class="info-group">
-          <p>temp</p>
-          <p>30-30</p>
-        </div>
-        <div class="info-group">
-          <p>temp</p>
-          <p>30-30</p>
-        </div>
-      </div>
-      <div class="card secondary">
-        <img src="./icons/weather-cloudy.svg" id="weather-img" width="30">
-        <h3 id="weather-condition"></h3>
-        <div class="info-group">
-          <p>temp</p>
-          <p>30-30</p>
-        </div>
-        <div class="info-group">
-          <p>temp</p>
-          <p>30-30</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</body>
+  </body>
 </html>
